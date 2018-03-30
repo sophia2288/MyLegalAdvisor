@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-2-20 17:37:47 by Hibernate Tools 5.2.8.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="law" dynamic-insert="false" dynamic-update="false" mutable="true" name="domain.TLaw" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="t_law">
+        <id name="lawId" type="java.lang.Integer">
+            <column name="lawId"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="fullName" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="fullName" not-null="true">
+                <comment>规范性文件全称。</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="organ" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="organ" not-null="true">
+                <comment>�������ء�</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="referenceNo" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="referenceNo">
+                <comment>�����ֺš�</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="publishDate" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="publishDate">
+                <comment>�������ڡ�</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="effectiveDate" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="effectiveDate" not-null="true">
+                <comment>�淶���ļ�ʩ�����ڡ�</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="prescription" optimistic-lock="true" type="string" unique="false">
+            <column length="5" name="prescription" not-null="true">
+                <comment>ʱЧ�ԡ�</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="hierarchy" optimistic-lock="true" type="string" unique="false">
+            <column length="11" name="hierarchy" not-null="true">
+                <comment>Ч������</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="classification" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="classification" not-null="true">
+                <comment>���ࡣ</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="aliases" optimistic-lock="true" type="string" unique="false">
+            <column length="500" name="aliases">
+                <comment>�淶���ļ���ơ�������֮���ö��ŷֿ���ʾ�����������Ժ�������á��л����񹲺͹��������Ϸ����Ľ��ͣ��������Ϸ�˾�����ͣ����������Ϸ�˾�����ͣ������߷�˾�����ͣ����߷�˾�����ͣ����߷����ͣ��������Ϸ����ͣ������߷����͡�</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="fullPathName" optimistic-lock="true" type="string" unique="false">
+            <column name="fullPathName">
+                <comment>�ļ�ȫ·�����ơ�</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
